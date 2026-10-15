@@ -22,23 +22,22 @@ phase boundary [6] into the two-liquid field.*
 For more detailed information about the model and results, see [paper ref](paper_link). **TODO: ADD PAPER REF**
 
 ## Dependencies
-- Python3
-- **TODO: ADD table of python libraries and versions**
+This software uses Python 3. For a list of python library dependencies, see `requirements.txt`.
 
 
 ## Installation and Execution
-Conda is recommended for setting up a unique virtual environment to contain this program's dependencies. To install conda,
-visit [Conda Docs](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html).
+It is recommended to set up a unique virtual environment from the `requirements.txt` file to contain this program's 
+dependencies using [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html), or Python's built-in module, venv. For information on setting up a virutal environment, see [venv docs](https://docs.python.org/3/library/venv.html) for venv, 
+or [Conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands) for Conda.
 
-Download the repository or clone with `git clone https://gitlab.jhuapl.edu/glantak1/fractionalcrystallization.git`
-
-In a terminal,
-1. Make a python environment from the environment.yml file with `conda env create -f environment.yml`
-2. Activate your environment with `conda activate Iron_Meteorites`
+Once an environment is created and activated, in a terminal,
+1. Install dependencies with `pip install -r requirements.txt`
+2. Download the repository or clone with `git clone https://github.com/JHUAPL/iron-meteorite-crystallization.git`
 3. Navigate to your local installation of this repository with `cd /path/to/fractionalcrystallization`
-4. Execute the `run_crystallization` script from the command line with `python -m model.run_crystallization <args>`
+4. Configure your favorite python IDE or execute the `run_crystallization` script from the command line with `python -m model.run_crystallization <args>`
 
-Or configure your favorite python IDE to execute the scripts.
+For more detailed information about the scripts in this repository and the list of possible arguments for 
+`run_crystallization.py`, see the [Model Files](#Main Model) section.
 
 ## File Descriptions
 
@@ -71,11 +70,19 @@ Arguments include:
 | `run_case`  | `integer` | 1        | model run case (0, 1, 2, or 3)                                   |
 
 The different `run_case` options are:
-- 0: model runs discounting liquid immiscibility
-- 1: model runs accounting for two-liquid immiscibility, crystallizing from both liquids and assuming the liquids are in equilibrium
-- 2: model accounts for liquid immiscibility, crystallizing only from the S-rich liquid
-- 3: model accounts for liquid immiscibility, crystallizing only from the P-rich liquid
+- 0: model runs discounting liquid immiscibility (Figure 2a)
+- 1: model runs accounting for two-liquid immiscibility, crystallizing from both liquids and assuming the liquids are in equilibrium (Figure 2d)
+- 2: model accounts for liquid immiscibility, crystallizing only from the S-rich liquid (Figure 2b)
+- 3: model accounts for liquid immiscibility, crystallizing only from the P-rich liquid (Figure 2c)
 
+Figure 2 shows an example of how the various run cases affect the model output.
+
+
+![Run Cases](docs/ims/all_run_cases.png)
+*Figure 2: Fractional crystallization for the IIIAB group for the following cases: a) One-liquid crystallization, 
+discounting the onset of liquid immiscibility (`run_case = 0`). b) Crystallization from the S-rich immiscible liquid 
+(`run_case = 2`). c) crystallization from the P-rich immiscible liquid (`run_case = 3`). d) Crystallization from the 
+S- and P-rich liquids in equilibrium (`run_case = 1`).*
 
 `fractional_crystallization_stages.py`: This script is the algorithm that models crystallization, containing the logic to run
 both the one and two liquid stages. 
@@ -89,9 +96,9 @@ both the one and two liquid stages.
 We include a graphical interface in the form of a jupyter notebook that employs user-friendly, interactive widgets
 to execute and explore the model results. 
 
-To deploy the notebook, **TODO: ADD DEPLOY INSTRUCTIONS**
+To deploy the notebook, visit [Binder](https://mybinder.org/v2/gh/JHUAPL/iron-meteorite-crystallization/HEAD?urlpath=%2Fdoc%2Ftree%2Fmodel_notebook.ipynb).
 
-For a user guide, see `docs/Fractional Crystallization Notebook User Guide.pdf`
+For a user guide, see `docs/Model Notebook User Guide.pdf`
 
 ## References
 1. Zhang, B., Chabot, N. L., & Rubin, A. E. (2024). Compositions of iron-meteorite parent bodies constrain the structure of the protoplanetary disk. Proceedings of the National Academy of Sciences, 121(23), e2306995121.
