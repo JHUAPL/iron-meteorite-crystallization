@@ -37,7 +37,7 @@ Once an environment is created and activated, in a terminal,
 4. Configure your favorite python IDE or execute the `run_crystallization` script from the command line with `python -m model.run_crystallization <args>`
 
 For more detailed information about the scripts in this repository and the list of possible arguments for 
-`run_crystallization.py`, see the [Model Files](#Main Model) section.
+`run_crystallization.py`, see the [Model Files](#main-model) section.
 
 ## File Descriptions
 
