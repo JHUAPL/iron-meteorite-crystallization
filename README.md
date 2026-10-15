@@ -33,7 +33,7 @@ or [Conda docs](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/
 Once an environment is created and activated, in a terminal,
 1. Install dependencies with `pip install -r requirements.txt`
 2. Download the repository or clone with `git clone https://github.com/JHUAPL/iron-meteorite-crystallization.git`
-3. Navigate to your local installation of this repository with `cd /path/to/fractionalcrystallization`
+3. Navigate to your local installation of this repository with `cd /path/to/iron-meteorite-crystallization`
 4. Configure your favorite python IDE or execute the `run_crystallization` script from the command line with `python -m model.run_crystallization <args>`
 
 For more detailed information about the scripts in this repository and the list of possible arguments for 
