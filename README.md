@@ -39,6 +39,14 @@ Once an environment is created and activated, in a terminal,
 For more detailed information about the scripts in this repository and the list of possible arguments for 
 `run_crystallization.py`, see the [Model Files](#main-model) section.
 
+## Jupyter Notebook
+We include a graphical interface in the form of a jupyter notebook that employs user-friendly, interactive widgets
+to execute and explore the model results. 
+
+To deploy the notebook, visit [Binder](https://mybinder.org/v2/gh/JHUAPL/iron-meteorite-crystallization/HEAD?urlpath=%2Fdoc%2Ftree%2Fmodel_notebook.ipynb).
+
+For a user guide, see `docs/Model Notebook User Guide.pdf`
+
 ## File Descriptions
 
 ### Data Files 
@@ -92,13 +100,6 @@ both the one and two liquid stages.
 - `parameters.py` initializes the relevant coefficients 
 - `state.py` tracks and records the state of the model and format data to be exported
 
-## Jupyter Notebook
-We include a graphical interface in the form of a jupyter notebook that employs user-friendly, interactive widgets
-to execute and explore the model results. 
-
-To deploy the notebook, visit [Binder](https://mybinder.org/v2/gh/JHUAPL/iron-meteorite-crystallization/HEAD?urlpath=%2Fdoc%2Ftree%2Fmodel_notebook.ipynb).
-
-For a user guide, see `docs/Model Notebook User Guide.pdf`
 
 ## References
 1. Zhang, B., Chabot, N. L., & Rubin, A. E. (2024). Compositions of iron-meteorite parent bodies constrain the structure of the protoplanetary disk. Proceedings of the National Academy of Sciences, 121(23), e2306995121.
